@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Payment</title>
+    <style>
+      h1 {
+        text-align: left;
+        margin-left: 50px;
+      }
+      u {
+        text-decoration: underline;
+      }
+      form {
+        margin: 0 auto;
+        padding: 20px;
+      }
+      label {
+        display: inline-block;
+        width: 30%;
+        text-align: right;
+        margin: 20px 10px;
+      }
+      input {
+        width: 40%;
+        padding: 8px;
+        box-sizing: border-box;
+        margin: 20px 3px;
+      }
+      .card_expiry_month {
+        width: 25%;
+        height: 30px;
+        background: gray;
+      }
+
+      input[type="checkbox"] {
+        width: auto;
+      }
+      input[type="submit"] {
+        width: 20%;
+        padding: 10px;
+        background-color: green;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        display: block;
+        margin: 15px auto; /* 追加 */
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Payment</h1>
+    <hr />
+    <form>
+      <label for="card_name">Card Number's Name</label>
+      <input
+        type="text"
+        id="card_name"
+        name="card_name"
+        required
+      /><br />
+
+      <label for="card_number">Card Number</label>
+      <input
+        type="text"
+        id="card_number"
+        name="card_number"
+        required
+      /><br />
+
+      <label for="card_expiry">Card Expiry Date</label>
+      <select
+        id="card_expiry_month"
+        name="card_expiry_month"
+        required
+        style="width: 25%; height: 30px; background: rgb(187, 182, 182)"
+      >
+        <option value=""></option>
+        <option value="01/01">January 01</option>
+      </select>
+
+      <select
+        id="card_expiry_year"
+        name="card_expiry_yar"
+        style="width: 22%; height: 30px; background: rgb(187, 182, 182)"
+        required
+      >
+        <option value="">2013</option>
+        <option value="2023">2023</option>
+        <option value="2024">2024</option>
+        <option value="2024">2025</option>
+      </select>
+      <br />
+
+      <label for="card_cvv">Card CVV</label>
+      <input
+        type="text"
+        id="card_cvv"
+        name="card_cvv"
+        required
+      /><br />
+
+      <label for="save_card"></label>
+      <input
+        type="checkbox"
+        id="save_card"
+        name="save_card"
+      />Save card on file?<br />
+
+      <input
+        type="submit"
+        value="PayNow"
+      />
+    </form>
+  </body>
+</html>
